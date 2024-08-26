@@ -1,0 +1,2 @@
+NewError: 새로운 HTTPError 인스턴스를 만들고 추가적인 message를 포함한다. 
+ - func NewError(code int, message ...string) *Error

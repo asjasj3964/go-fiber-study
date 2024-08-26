@@ -1,0 +1,14 @@
+routing: 어떻게 애플리케이션이 특정 endpoint에 대한 client request에 반응할 것인지에 대해 참조한다. 
+ - endpoint: URI(or path)와 특정 HTTP request method들로 구성된다. 
+  - GET, POST, PUT, ...
+ - 각 route는 여러 개의 handler function을 가질 수 있다. 
+  - handler function은 route path가 매칭되면 실행된다. 
+
+route의 정의
+ - app.Method(path string, ...func(*fiber.Ctx) error)
+
+app: fiber 인스턴스
+method: http request method로 GET, PUT, POST 등
+path: server에 대한 가상의 path
+func(* fiber.Ctx) error: callback function으로 route가 매칭될 때 실행되는 Context를 포함한다. 
+

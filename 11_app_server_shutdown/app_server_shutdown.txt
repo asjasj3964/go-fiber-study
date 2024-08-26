@@ -1,0 +1,5 @@
+shutdown: 어떠한 active connection을 방해하지 않고 server shutdown 시켜준다.
+ - shutdown은 모든 열려있는 listener를 닫고, shutting down 되기 전에 
+ 모든 connection들에게 idle 응답을 전달할 때까지 끝없이 기다린다. 
+ - func (app *App) Shutdown() error
+ - func (app *App) ShutdownWithTimeout(timeout time.Duration) error

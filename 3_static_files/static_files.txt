@@ -1,0 +1,5 @@
+images, CSS, JS와 같은 static file들을 제공하기 위해선 
+function handler를 파일 또는 directory string으로 변환해야 한다. 
+
+함수 시그니처
+ - app.Static(prefix, root string, config ...Static)

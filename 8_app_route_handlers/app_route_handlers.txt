@@ -1,0 +1,23 @@
+특정 http method에 대한 route를 등록할 수 있다. 
+HTTP methods
+ - func (app *App) Get(path string, handlers ...Handler) Router
+ - func (app *App) Head(path string, handlers ...Handler) Router
+ - func (app *App) Post(path string, handlers ...Handler) Router
+ - func (app *App) Put(path string, handlers ...Handler) Router
+ - func (app *App) Delete(path string, handlers ...Handler) Router
+ - func (app *App) Connect(path string, handlers ...Handler) Router
+ - func (app *App) Options(path string, handlers ...Handler) Router
+ - func (app *App) Trace(path string, handlers ...Handler) Router
+ - func (app *App) Patch(path string, handlers ...Handler) Router
+
+Add를 통해 메서드를 value로 지정할 수 있다. 
+ - func (app *App) Add(method, path string, handlers ...Handler) Router
+
+모든 HTTP 메서드에 경로를 등록한다. 
+app과 거의 동일하다. (사용하나 prefix에 바인딩되지 않는다)
+ - func (app *APP) All(path string, handlers ...Handler) Router
+
+Use는 middleware 패키지들에 사용되고 prefix로 사용된다.
+ - routes는 오직 각 path의 첫 부분이 맞을 때 동작한다. 
+ ex. /asj의 경우, /asj/seongjin, /asjjjjjj 등이 가능하다. 
+ - func (app *App) Use(args ...interface{}) Router

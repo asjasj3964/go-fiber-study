@@ -1,0 +1,4 @@
+test 메서드를 통해 애플리케이션을 test 할 수 있다. 
+timeout의 default는 1s이고, -1을 넣으면 timeout을 disable 시킬 수 있다.
+ - func (app * App) Test(req *http.Request, msTimeout ...int)(*http.Response, error)
+ 

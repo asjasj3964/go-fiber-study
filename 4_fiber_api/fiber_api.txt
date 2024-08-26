@@ -1,0 +1,5 @@
+새로운 fiber app을 만들기 위해선 New 메서드 + optional config를 사용한다. 
+ - func New(config ...Config) *APP
+
+config fields
+ - https://docs.gofiber.io/api/fiber 참고

@@ -1,0 +1,2 @@
+route들은 *Group 구조체를 만들어 그룹핑 할 수 있다. 
+ - func (app * APP) Group(prefix string, handlers ...Hnadler) Router

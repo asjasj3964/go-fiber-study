@@ -1,0 +1,3 @@
+common prefix로 route들을 만들어 common function 안에 넣을 수 있다. 
+ - func(app * App) Route(prefix string, fn func(router Router), name ...string) Router
+ 
